@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function Foo () {
+        //     getName = function () {
+        //         console.log(1)
+        //     }
+        //     return this
+        // }
+        // Foo.getName = function () {
+        //     console.log(2)
+        // }
+        // Foo.prototype.getName = function () {
+        //     console.log(3)
+        // }
+        // var getName = function () {
+        //     console.log(4)
+        // }
+        // function getName () {
+        //     console.log(5)
+        // }
+        // Foo.getName() // 2
+        // getName() // 4
+        // Foo().getName() // 1
+        // getName()// 1
+        // new Foo.getName() // 2
+        // new Foo().getName() // 3
+        // new new Foo().getName() // 3
+
+
+        // async function async1 () {
+        //     console.log('async1 start')
+        //     await async2()
+        //     console.log('async1 end')
+        // }
+        // async function async2 () {
+        //     console.log('async2')
+        // }
+        // console.log('script start')
+        // setTimeout(function () {
+        //     console.log('setTimeout')
+        // }, 0)
+        // async1()
+        // new Promise(function () {
+        //     console.log('promise1')
+        //     resolve()
+        // }).then(function () {
+        //     console.log('promise2')
+        // })
+        // console.log('script end')
+
+        // function A () {
+        //     alert(1)
+        // }
+        // function Func () {
+        //     A = function () {
+        //         alert(2)
+        //     }
+        //     return this
+        // }
+        // Func.A = A
+        // Func.prototype = {
+        //     A : () => {
+        //         alert(3)
+        //     }
+        // }
+        // A() // 1
+        // Func.A() // 1
+        // Func().A() // 2
+        // new Func.A() // 1
+        // new Func().A() // 3
+        // new new Func().A() // 报错   箭头函数是不能被new
+
+
+        var x = 2
+        var y = {
+            x: 3,
+            z: (function (x) {
+                this.x *= x
+                x += 2
+                return function (n) {
+                    this.x *= n
+                    x += 3
+                    console.log(x)
+                }
+            })(x)
+        }
+        var m = y.z
+        m(4) // 7
+        y.z(5) // 10
+        console.log(x, y.x) // 16 15
+
+
+        // var a  = ? 
+        // if (a == 1 && a == 2 && a == 3) {
+        //     console.log(1)
+        // }
+
+
+        // var x = 0,
+        //     y = 1
+        // function fn () {
+        //     x += 2
+        //     fn = function (y) {
+        //         console.log(y + (--x))
+        //     }
+        //     console.log(x, y)
+        // }
+        // fn(3)
+        // fn(4)
+        // console.log(x, y)
+
+
+
+        setTimeout(() => {
+            console.log(1)
+        }, 20)
+        console.log(2)
+        setTimeout(() => {
+            console.log(3)
+        }, 10)
+        console.log(4)
+        console.time('AA')
+        for (let i = 0; i< 90000000; i++) {
+
+        }
+        console.timeEnd('Aa')
+        console.log(5)
+        setTimeout(() => {
+            console.log(6)
+        }, 6)
+        console.log(7)
+        setTimeout(() => {
+            console.log(8)
+        }, 15);
+        console.log(9)
+    </script>
+</body>
+</html>
