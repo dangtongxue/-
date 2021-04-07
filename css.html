@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 618px;
+        }
+    </style>
+</head>
+<body>
+    <h2>掌握盒子水平垂直居中</h2>
+    <ul>
+        <li>
+            定位三种
+            <ol>
+                <li>必须有宽高 absolute  top 50% left 50% margin-top(高度的一半) margin-bottom(宽度的一半)</li>
+                <li>必须有宽高但不需要考虑宽高 absolute  top 0 left 0 margin: auto</li>
+                <li>不需要宽高 兼容性不是很好 absolute  top 50% left 50% transfrom: tranlate(-50%, -50%)</li>
+            </ol>
+        </li>
+        <li>flex布局</li>
+        <li>js</li>
+        <li>display: table-cell   控制文本的 要把盒子变成文本  父元素要有固定宽高的</li>
+    </ul>
+    <h2>盒模型</h2>
+    <ul>
+        <li>标准盒模型  width指content部分的宽度</li>
+        <li>怪异盒模型  width表示content+padding+border这三个部分的宽度</li>
+        <li>box-sizing: content-box</li>
+    </ul>
+    <h2>经典布局方案</h2>
+    <ul>
+        <li>圣杯布局 并排布局 浮动 左侧margin-left:-100%;在加上相对自己宽度的定位  右侧margin-right:-200px;  中间元素使用左右内间距留出左右宽度的距离</li>
+        <li>双飞翼布局 将中间内容的元素嵌套起来 浮动 中间元素使用外间距距留出左右宽度的距离 左侧 margin-left: -100%; 右侧 margin-left: -200px;</li>
+        <li>左右固定,  中间自适应</li>
+        <li>使用 calc  css 语法 动态计算宽度</li>
+        <li>flex布局</li>
+    </ul>
+    <h2>移动端响应方式的三大方案</h2>
+    <ul>
+        <li>media 媒体查询 百分比</li>
+        <li>rem</li>
+        <li>flex</li>
+        <li>vh / vw</li>
+    </ul>
+    <h2>z-index的工作原理及适用范围</h2>
+    <ul>
+        <li>z-index 这个属性控制着元素z轴的表现形式</li>
+        <li>适用范围: 仅适用于定位元素，即拥有relative,absolute,fixed属性的position元素</li>
+        <li>数值越大说明元素的堆叠顺序越高，越靠近屏幕</li>
+        <li>未定义时，后来居上，未定义z-index的属性，元素的堆叠顺序基于它所在的文档树。默认情况下，后来的元素的z-index的值越大</li>
+    </ul>
+    <h2>rem px em的区别</h2>
+    <ul>
+        <li>px 相对于屏幕分辨率而言的</li>
+        <li>em 相对于当前对象内文本的字体尺寸</li>
+        <li>rem 相对于根节点html字体大小来计算</li>
+    </ul>
+    <h2>css3</h2>
+    <ul>
+        <li>边框 border-radius box-shadow ; 背景background-size，background-origin; 动画 animtion; </li>
+    </ul>
+    <h2>盒模型</h2>
+    <ul>
+        <li><div>标准盒模型: </div><img src="https://user-images.githubusercontent.com/17233651/42498021-b4dd6a46-845d-11e8-8bd9-ac2d90985f2a.png" alt=""></li>
+        <li><div>IE盒子模型：</div><img src="https://user-images.githubusercontent.com/17233651/42498075-d3496e3a-845d-11e8-919c-eb3a7866883b.png" alt=""></li>
+    </ul>
+    <h2>link 和 import 的区别</h2>
+    <ul>
+        <li>link 是html 标签, 而import是css 提供的</li>
+    </ul>
+    <h2>BFC</h2>
+    <ul>
+        <li>BFC是块级格式上下文, 是一个独立的渲染区域, 并且有一定的布局规则</li>
+        <li>BFC区域是不会跟float margin 重叠的</li>
+        <li>BFC是页面上的一个独立容器, 子元素也不会影响到外面</li>
+        <li>那些元素会生成BFC
+            <ol>
+                <li>根元素</li>
+                <li>float 不为none的元素</li>
+                <li>position为fixed和absolute的元素</li>
+                <li>display为inline-block、table-cell、table-caption，flex，inline-flex的元素</li>
+                <li>overflow不为visible的元素</li>
+            </ol>
+        </li>
+    </ul>
+    <h2>块元素和行内元素</h2>
+    <ul>
+        <li>块元素 独占一行, 并且有自动填满父元素, 可以设置margin和padding以及高度和宽度</li>
+        <li>行元素 不会独占一行, 宽度高度失效, 并且垂直方向的margin和padding 失效</li>
+    </ul>
+</body>
+</html>

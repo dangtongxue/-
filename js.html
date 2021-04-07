@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>堆和栈</h2>
+    <ul>
+        <li>堆: 存储引用类型值的空间</li>
+        <li>栈: 存储基本类型值和指定代码地环境</li>
+    </ul>
+    <h2>var let const 的区别</h2>
+    <ul>
+        <li>var 有变量提升 而let const 是 没有变量提升; 变量提升就是在js中  函数及变量的声明都会被提升到所在作用域的最顶部</li>
+        <li>let const 都是块级作用域变量   同一作用域中  let const 是不能进行多次声明的 而 var  是可以的</li>
+        <li>const  一但声明, 常量(基础类型)的值是不可以更改的, 但是必须要赋值  let是可以进行更改赋值的</li>
+    </ul>
+    <h2>箭头函数</h2>
+    <ul>
+        <li>箭头函数是es6中新的函数定义形式; 箭头函数中是没有this, 是他定义的时候的this, 不是他执行时候的, 他的this指向 是他上层函数的this</li>
+    </ul>
+    <h2>Set  Map</h2>
+    <ul>
+        <li>set map 是es6新增的数据结构</li>
+        <li>set 类似于数组, 但是数组可以允许元素重复, set是不允许的</li>
+        <li>map 类似于对象, 普通对象的key 必须是字符串和数字, 但是map的key可以使任何数据类型的</li>
+    </ul>
+    <h2>作用域</h2>
+    <ul>
+        <li>作用域 是指可访问变量, 对象, 函数的集合;在有效的范围内调用变量, 对象, 函数</li>
+        <li>全局作用域和函数作用域, 在es6之前是没有块级作用域, 块级作用域</li>
+    </ul>
+    <h2>原型和原型链</h2>
+    <ul>
+        <li>每一个对象都会在内部初始化一个属性, 这个属性就是prototype</li>
+        <li>所有引用类型, 都有对象特性, 都会自由扩展属性</li>
+        <li>所有引用类型, 都有一个__proto__属性, 属性值是一个普通的对象</li>
+        <li>所有函数, 都有一个prototype属性, 属性值是一个普通的对象</li>
+        <li>所有引用类型, __proto__属性值都指向他的构造函数的prototype属性值</li>
+        <li>原型链  当调用某种方法或者查找某种属性时, 首先会在自身调用和查找, 如果自身没有该方法和属性时, 则会去它的__proto__属性中调用和查找,  也就是它的构造函数的prototype中调用查找</li>
+    </ul>
+    <h2>This的理解</h2>
+    <ul>
+        <li>this的值在执行的时候确认, 并不是在定义的时候确认,  因为this是执行上下文环境的一部分, 而执行上下文需要在代码之前确认, 而不是定义的时候</li>
+    </ul>
+    <h2>介绍js的数据类型</h2>
+    <ul>
+        <li>引用类型 Object function </li>
+        <li>基本类型 undefined、Null、Boolean、Number、String、Symbol</li>
+    </ul>
+</body>
+</html>

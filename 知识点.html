@@ -4,82 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            width: 1000px;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
-    <h2>1. 掌握盒子水平垂直居中</h2>
-    <ul>
-        <li>
-            定位三种
-            <ol>
-                <li>必须有宽高 absolute  top 50% left 50% margin-top(高度的一半) margin-bottom(宽度的一半)</li>
-                <li>必须有宽高但不需要考虑宽高 absolute  top 0 left 0 margin: auto</li>
-                <li>不需要宽高 兼容性不是很好 absolute  top 50% left 50% transfrom: tranlate(-50%, -50%)</li>
-            </ol>
-        </li>
-        <li>flex布局</li>
-        <li>js</li>
-        <li>display: table-cell   控制文本的 要把盒子变成文本  父元素要有固定宽高的</li>
-    </ul>
-    <h2>2. 盒模型</h2>
-    <ul>
-        <li>标准盒模型  width指content部分的宽度</li>
-        <li>怪异盒模型  width表示content+padding+border这三个部分的宽度</li>
-        <li>box-sizing: content-box</li>
-    </ul>
-    <h2>3. 经典布局方案</h2>
-    <ul>
-        <li>圣杯布局 并排布局 浮动 左侧margin-left:-100%;在加上相对自己宽度的定位  右侧margin-right:-200px;  中间元素使用左右内间距留出左右宽度的距离</li>
-        <li>双飞翼布局 将中间内容的元素嵌套起来 浮动 中间元素使用外间距距留出左右宽度的距离 左侧 margin-left: -100%; 右侧 margin-left: -200px;</li>
-        <li>左右固定,  中间自适应</li>
-        <li>使用 calc  css 语法 动态计算宽度</li>
-        <li>flex布局</li>
-    </ul>
-    <h2>4. 移动端响应方式的三大方案</h2>
-    <ul>
-        <li>media 媒体查询 百分比</li>
-        <li>rem</li>
-        <li>flex</li>
-        <li>vh / vw</li>
-    </ul>
-    <h2>5. z-index的工作原理及适用范围</h2>
-    <ul>
-        <li>z-index 这个属性控制着元素z轴的表现形式</li>
-        <li>适用范围: 仅适用于定位元素，即拥有relative,absolute,fixed属性的position元素</li>
-        <li>数值越大说明元素的堆叠顺序越高，越靠近屏幕</li>
-        <li>未定义时，后来居上，未定义z-index的属性，元素的堆叠顺序基于它所在的文档树。默认情况下，后来的元素的z-index的值越大</li>
-    </ul>
-    <h2>6. rem px em的区别</h2>
-    <ul>
-        <li>px 相对于屏幕分辨率而言的</li>
-        <li>em 相对于当前对象内文本的字体尺寸</li>
-        <li>rem 相对于根节点html字体大小来计算</li>
-    </ul>
+    
     <h2>7. html5 的理解</h2>
-    <h2>8. 介绍js的数据类型</h2>
     <ul>
-        <li>引用类型 Object function </li>
-        <li>基本类型 undefined、Null、Boolean、Number、String、Symbol</li>
-    </ul>
-    <h2></h2>
-    <ul>
-        <li>堆: 存储引用类型值的空间</li>
-        <li>栈: 存储基本类型值和指定代码地环境</li>
-    </ul>
-    <h2>var let const 的区别</h2>
-    <ul>
-        <li>var 有变量提升 而let const 是 没有变量提升; 变量提升就是在js中  函数及变量的声明都会被提升到所在作用域的最顶部</li>
-        <li>let const 都是块级作用域变量   同一作用域中  let const 是不能进行多次声明的 而 var  是可以的</li>
-        <li>const  一但声明, 常量(基础类型)的值是不可以更改的, 但是必须要赋值  let是可以进行更改赋值的</li>
-    </ul>
-    <h2>箭头函数</h2>
-    <ul>
-        <li>箭头函数是es6中新的函数定义形式; 箭头函数中是没有this, 是他定义的时候的this, 不是他执行时候的, 他的this指向 是他上层函数的this</li>
-    </ul>
-    <h2>Set  Map</h2>
-    <ul>
-        <li>set map 是es6新增的数据结构</li>
-        <li>set 类似于数组, 但是数组可以允许元素重复, set是不允许的</li>
-        <li>map 类似于对象, 普通对象的key 必须是字符串和数字, 但是map的key可以使任何数据类型的</li>
+        <li>语义标签 header section footer main nav main aside等等</li>
+        <li>新的表单控件 date time email url search</li>
+        <li>新的input 类型 color date email  dateTime</li>
+        <li>canvas 绘图</li>
+        <li>多媒体 audio video </li>
+        <li>本地离线存储</li>
+        <li>web存储 localStorage, sessionStorage</li>
     </ul>
     <h2>浏览器的渲染过程</h2>
     <ol>
@@ -100,24 +42,6 @@
     <ul>
         <li>减少对dom节点的操作</li>
         <li>减少重复获取节点的一些值, 多次获取会重复造成回流</li>
-    </ul>
-    <h2>作用域</h2>
-    <ul>
-        <li>作用域 是指可访问变量, 对象, 函数的集合;在有效的范围内调用变量, 对象, 函数</li>
-        <li>全局作用域和函数作用域, 在es6之前是没有块级作用域, 块级作用域</li>
-    </ul>
-    <h2>原型和原型链</h2>
-    <ul>
-        <li>每一个对象都会在内部初始化一个属性, 这个属性就是prototype</li>
-        <li>所有引用类型, 都有对象特性, 都会自由扩展属性</li>
-        <li>所有引用类型, 都有一个__proto__属性, 属性值是一个普通的对象</li>
-        <li>所有函数, 都有一个prototype属性, 属性值是一个普通的对象</li>
-        <li>所有引用类型, __proto__属性值都指向他的构造函数的prototype属性值</li>
-        <li>原型链  当调用某种方法或者查找某种属性时, 首先会在自身调用和查找, 如果自身没有该方法和属性时, 则会去它的__proto__属性中调用和查找,  也就是它的构造函数的prototype中调用查找</li>
-    </ul>
-    <h2>This的理解</h2>
-    <ul>
-        <li>this的值在执行的时候确认, 并不是在定义的时候确认,  因为this是执行上下文环境的一部分, 而执行上下文需要在代码之前确认, 而不是定义的时候</li>
     </ul>
     <h2>http和https的区别</h2>
     <ul>
@@ -174,7 +98,14 @@
     </ul>
     <h2>输入url到页面加载显示完成发生了什么</h2>
     <ul>
-        <li>DNS解析  返回ip地址回来</li>
+        <li>DNS解析  将域名地址解析为ip地址
+            <ol>
+                <li>浏览器DNS缓存</li>
+                <li>系统的DNS缓存</li>
+                <li>路由DNS缓存</li>
+                <li>网络运营商DNS缓存</li>
+            </ol>
+        </li>
         <li>TCP连接 三次握手来建立连接
             <ol>
                 <li>第一次握手 客户端向服务器发送数据的初始序列号(SYN)</li>
@@ -184,8 +115,24 @@
         </li>
         <li>发送HTTP请求</li>
         <li>服务器处理请求并返回HTTP报文</li>
-        <li>浏览器解析渲染页面</li>
-        <li>连接结束</li>
+        <li>浏览器解析渲染页面
+            <ol>
+                <li>浏览器调用HTML解析器 构建成dom树</li>
+                <li>浏览器调用HTML解析器 构建成cssom树</li>
+                <li>浏览器调用JavaScript解析器</li>
+                <li>将dom树和cssom树合成一个渲染树</li>
+                <li>根据渲染树来计算布局, 计算每个节点的几何信息(布局)</li>
+                <li>将各个节点颜色绘制到屏幕(渲染)</li>
+            </ol>
+        </li>
+        <li>连接结束(四次挥手, 简单四句话: 发完了, 直到发完了, 收完了, 知道收完了)
+            <ol>
+                <li>第一次挥手  客户端发起, 发送服务器, 请求报文接收完毕</li>
+                <li>第二次挥手  服务器发起, 发送浏览器, 请求报文接受完了, 我准备关闭了</li>
+                <li>第三次挥手  服务器发起, 发送浏览器, 响应报文发送完了</li>
+                <li>第三次挥手  客户端发起, 发送服务器, 我接受完毕</li>
+            </ol>
+        </li>
     </ul>
 </body>
 </html>
